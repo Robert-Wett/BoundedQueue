@@ -1,4 +1,4 @@
-BoundedQueue
+AS3 Bounded Queue
 ============
 
 #### An ActionScript 3 Bounded Queue Implementation
