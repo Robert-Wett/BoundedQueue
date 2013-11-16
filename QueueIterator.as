@@ -18,8 +18,8 @@ package com.bqueue.flex.util {
      * <h6> Example Usage: </h6>
      * 
      * <listing>
-import com.investlab.util.QueueIterator;
-import com.investlab.util.BoundedQueue;
+import com.bqueue.util.QueueIterator;
+import com.bqueue.util.BoundedQueue;
      
 var queue  : BoundedQueue = new BoundedQueue(String, 4);
 var names1 : Array        = new Array("Abed", "Berry", "Carl", "Dick");
@@ -63,9 +63,9 @@ while(iter.hasNext()) {
 trace(name.substr(0, name.size - 2)); // Traces "Herb, Gary, Fred, Earl" to the console.
      * </listing>
      * 
-     * @see com.investlab.flex.util.IIterator
-     * @see com.investlab.flex.util.QueueIterator
-     * @see com.investlab.flex.util.BoundedQueue#getIterator()
+     * @see com.bqueue.flex.util.IIterator
+     * @see com.bqueue.flex.util.QueueIterator
+     * @see com.bqueue.flex.util.BoundedQueue#getIterator()
      * 
      * @author Jay Wettlaufer
      */
