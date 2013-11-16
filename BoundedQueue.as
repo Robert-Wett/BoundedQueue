@@ -132,8 +132,8 @@ trace("# of entries in queue: " + results.length);   *  </listing>
          * @see #find() 
          * @see #findAllMatching() 
          * @see #drainToValue() 
-         * @see com.investlab.flex.error.CapacityError
-         * @see com.investlab.flex.util.IComparator
+         * @see com.bqueue.flex.error.CapacityError
+         * @see com.bqueue.flex.util.IComparator
          */
         public function BoundedQueue(type       : Class       = null,
                                      capacity   : int         = 0,
@@ -245,7 +245,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
          * 
          * @throws IllegalOperationError if no default comparator has been specified and <code>comparator</code> is <code>null</code>.
          * 
-         * @see com.investlab.flex.util.IComparator
+         * @see com.bqueue.flex.util.IComparator
          */
         public function remove(identifier : Object, comparator : IComparator = null) : * {
             var curNode : ListNode = _queue.firstNode;
@@ -295,7 +295,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
          * 
          * @throws IllegalOperationError if no default comparator has been specified and <code>comparator</code> is <code>null</code>.
          * 
-         * @see com.investlab.flex.util.IComparator
+         * @see com.bqueue.flex.util.IComparator
          */
         public function removeAllMatching(identifier : Object, comparator : IComparator = null) : Array {
             
