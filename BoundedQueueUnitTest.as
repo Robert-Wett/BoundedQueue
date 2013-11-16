@@ -474,7 +474,7 @@ package com.bqueue.flex.test {
  * Comparator definitions
  */
 
-import com.investlab.flex.util.IComparator;
+import com.bqueue.flex.util.IComparator;
 
 class Person {
     public var first : String;
