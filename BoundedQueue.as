@@ -252,7 +252,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
             
             if (comparator == null) {
                 if (_defaultComparator == null)
-                    throw new IllegalOperationError("A comparator must be specified (there is default comparator for this queue.)");
+                    throw new IllegalOperationError("A comparator must be specified (there is no default comparator for this queue.)");
                 comparator = _defaultComparator;
             }
             while (true) {
@@ -306,7 +306,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
             
             if (comparator == null){
                 if (_defaultComparator == null)
-                    throw new IllegalOperationError("A comparator must be specified (there is default comparator for this queue.)");
+                    throw new IllegalOperationError("A comparator must be specified (there is no default comparator for this queue.)");
                 comparator = _defaultComparator;
             }
             while (true) {
@@ -358,7 +358,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
             
             if (comparator == null) {
                 if (_defaultComparator == null)
-                    throw new IllegalOperationError("A comparator must be specified (there is default comparator for this queue.)");
+                    throw new IllegalOperationError("A comparator must be specified (there is no default comparator for this queue.)");
                 comparator = _defaultComparator;
             }
             while (true) {
@@ -403,7 +403,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
             
             if (comparator == null){
                 if (_defaultComparator == null)
-                    throw new IllegalOperationError("A comparator must be specified (there is default comparator for this queue.)");
+                    throw new IllegalOperationError("A comparator must be specified (there is no default comparator for this queue.)");
                 comparator = _defaultComparator;
             }
             while (true) {
@@ -474,7 +474,7 @@ trace("# of entries in queue: " + results.length);   *  </listing>
             
             if (comparator == null){
                 if (_defaultComparator == null)
-                    throw new IllegalOperationError("A comparator must be specified (there is default comparator for this queue.)");
+                    throw new IllegalOperationError("A comparator must be specified (there is no default comparator for this queue.)");
                 comparator = _defaultComparator;
             }
             while (true) {
