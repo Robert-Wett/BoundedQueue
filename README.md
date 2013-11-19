@@ -67,4 +67,4 @@ Implements a FIFO queue that is optionally capacity bound.  The queue also enfor
 	        
 	queue.clear();
 	// Trace "# of entries in queue: 1" to the console.
-	trace("# of entries in queue: " + results.length);   *  </listing>
+	trace("# of entries in queue: " + results.length);
