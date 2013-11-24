@@ -71,7 +71,8 @@ trace((queue.peek() as Person).first + " " + (queue.peek() as Person).last);
         
 queue.clear();
 // Trace "# of entries in queue: 1" to the console.
-trace("# of entries in queue: " + results.length);   *  </listing>
+trace("# of entries in queue: " + results.length);   
+     *  </listing>
      * 
      *  <p>
      *  <em>Notes:</em>
