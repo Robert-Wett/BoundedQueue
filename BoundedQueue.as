@@ -399,7 +399,7 @@ trace("# of entries in queue: " + results.length);
          * @throws IllegalOperationError if no default comparator has been specified and <code>comparator</code> is <code>null</code>.
          */
         public function findAllMatching(identifier : Object, comparator : IComparator = null) : Array {
-            var returnArray : Array          = new Array();
+            var returnArray : Array    = new Array();
             var curNode     : ListNode = _queue.firstNode;
             
             if (comparator == null){
@@ -470,8 +470,8 @@ trace("# of entries in queue: " + results.length);
          * @throws IllegalOperationError if no default comparator has been specified and <code>comparator</code> is <code>null</code>.
          */
         public function drainToValue(indentifier : Object, comparator : IComparator = null) : Array {       
-            var returnArray : Array       = new Array();
-            var curNode     : ListNode  = _queue.firstNode;
+            var returnArray : Array    = new Array();
+            var curNode     : ListNode = _queue.firstNode;
             
             if (comparator == null){
                 if (_defaultComparator == null)
