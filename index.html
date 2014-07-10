@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Boundedqueue by Robert-Wett</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Boundedqueue</h1>
+        <h2>ActionScript 3 Bounded Queue</h2>
+        <a href="https://github.com/Robert-Wett/BoundedQueue" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="as3-bounded-queue" class="anchor" href="#as3-bounded-queue"><span class="octicon octicon-link"></span></a>AS3 Bounded Queue</h1>
+
+<h4>
+<a name="an-actionscript-3-bounded-queue-implementation" class="anchor" href="#an-actionscript-3-bounded-queue-implementation"><span class="octicon octicon-link"></span></a>An ActionScript 3 Bounded Queue Implementation</h4>
+
+<p>Implements a FIFO queue that is optionally capacity bound.  The queue also enforces type safety for all entries by designating the queue object class type in the constructor.  ActionScript 3 does not intrinsically support templates/generics other than the <code>Vector</code> class but this convention serves the same purpose for this object.</p>
+
+<h5>
+<a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example usage:</h5>
+
+<pre><code>// Create a FIFO queue of &lt;code&gt;Person&lt;/code&gt; objects that can 
+// only contain 2 entrees at a given time with no default comparator.
+var fnComp : FullNameComparator = new FullNameComparator();           
+var lnCmp  : LastNameComparator = new LastNameComparator();
+var queue  : BoundedQueue       = new BoundedQueue(Person, 2);
+queue.put(new Person("Bart", "Gunn"));
+queue.put(new Person("Ted",  "Gunn"));
+
+var search : Person = new Person("Bart", "Gunn");
+var result : Person = queue.find(search, fnComp) as Person;
+// Trace "Bart Gunn" to the console.
+trace(result.first + " " + result.last);
+
+var results : Array = queue.findAllMatching(search, fnComp);
+// Trace "# of entries in queue: 1" to the console.
+trace("# of entries in queue: " + results.length);
+// Trace "Bart Gunn" to the console.
+trace((results[0] as Person).first + " " + (results[0] as Person).last);
+
+results = queue.findAllMatching(search, lnCmp);
+// Trace "# of entries in queue: 2" to the console.
+trace("# of entries in queue: " + results.length);
+// Trace "Bart Gunn" to the console.
+trace((results[0] as Person).first + " " + (results[0] as Person).last);
+// Trace "Ted Gunn" to the console.
+trace((results[1] as Person).first + " " + (results[1] as Person).last);
+
+queue.drainToValue(search, fnComp);
+// Trace "# of entries in queue: 2" to the console.
+trace("# of entries in queue: " + results.length);
+// Trace "Bart Gunn" to the console.
+trace((queue.peek() as Person).first + " " + (queue.peek() as Person).last);
+
+var take : Person = queue.take() as Person;
+// Trace "Ted Gunn" to the console.
+trace((queue.peek() as Person).first + " " + (queue.peek() as Person).last);
+// Trace "Bart Gunn" to the console.
+trace(take.first + " " + take.last);    
+// Trace "# of entries in queue: 1" to the console.
+trace("# of entries in queue: " + results.length);
+
+result = queue.put(take);
+// Traces "# of entries in queue: 2" to the console.
+trace("# of entries in queue: " + results.length);
+// Trace "Bart Gunn" to the console.
+trace(result.first + " " + result.last);
+// Trace "Ted Gunn" to the console.
+trace((queue.peek() as Person).first + " " + (queue.peek() as Person).last);
+
+results = queue.drainToSize(1);
+// Trace "# of entries in queue: 1" to the console.
+trace("# of entries in queue: " + results.length);
+// Trace "Bart Gunn" to the console.
+trace((results[0] as Person).first + " " + (results[0] as Person).last);
+// Trace "Ted Gunn" to the console.
+trace((queue.peek() as Person).first + " " + (queue.peek() as Person).last);
+
+queue.clear();
+// Trace "# of entries in queue: 1" to the console.
+trace("# of entries in queue: " + results.length);
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Robert-Wett/BoundedQueue/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Robert-Wett/BoundedQueue/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Robert-Wett/BoundedQueue"></a> is maintained by <a href="https://github.com/Robert-Wett">Robert-Wett</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
