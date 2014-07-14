@@ -67,7 +67,7 @@ trace(name.substr(0, name.size - 2)); // Traces "Herb, Gary, Fred, Earl" to the 
      * @see com.bqueue.flex.util.QueueIterator
      * @see com.bqueue.flex.util.BoundedQueue#getIterator()
      * 
-     * @author Jay Wettlaufer
+     * @author Robert Wettlaufer
      */
     public class QueueIterator implements IIterator {
         
